@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-head">
+        <h2 class="heading">Login to your account</h2>
+      </div>
+      <form action="" class="login-form" onsubmit="return validateForm()">
+        <div class="field">
+          <label for="email">
+            <i class="fas fa-envelope input-img"></i>
+          </label>
+          <input
+            type="email"
+            placeholder="Enter Your Email"
+            class="input-field"
+            id="email"
+            required
+          />
+          <span id="email-error" class="error"></span>
+        </div>
+        <div class="field">
+          <label for="password">
+            <i class="fas fa-lock input-img"></i>
+          </label>
+          <input
+            type="password"
+            placeholder="Enter Your password"
+            class="input-field"
+            id="password"
+            required
+            minlength="8"
+          />
+          <i id="eye" class="fa fa-eye"></i>
+          <span id="password-error" class="error"></span>
+        </div>
+
+        <button class="submit" type="submit">Submit</button>
+        <div class="gap">
+          <a href="https://www.theconvertway.com/" class="forgot">
+            <i class="fas fa-users"></i>
+            Create Account
+          </a>
+          <a href="#" class="forgot">Forgot your password ?</a>
+        </div>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

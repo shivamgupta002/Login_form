@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* background-image: url('https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); */
+  background-image: url('./img/login-page.webp');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  overflow: hidden;
+}
+.login-head {
+  display: flex;
+  justify-content: space-around;
+}
+
+.heading {
+  color: #65848f;
+  position: relative;
+  margin: 0.3rem 0rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+}
+.heading::first-letter {
+  font-size: 1.76rem;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 6px;
+  background-color: #65848f;
+  scale: 0;
+  transform-origin: right;
+  transition: scale 0.5s;
+}
+
+.heading:hover::before {
+  scale: 1;
+  transform-origin: left;
+}
+.login-container {
+  position: absolute;
+  z-index: 11;
+  min-height: 200px;
+  height: auto;
+  width: 95%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 25px 20px;
+  box-shadow: 8px 4px 8px #383332;
+   /* 0px 0px 8px #383332,; */
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.field {
+  display: flex;
+  border: 1px solid #4c4f74;
+  width: 20rem;
+  height: 2.8rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+
+}
+
+.input-img {
+  color: #161d20;
+  opacity: 0.5;
+  margin: 0.8rem 1rem;
+  font-size: 1.2rem;
+}
+.input-img:hover {
+  color: #236cab;
+}
+.input-field {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+}
+.fa-eye {
+  position: absolute;
+  right: 9px;
+  opacity: 0.5;
+  margin-left: 2.5rem;
+  margin-top: 0.8rem;
+}
+.field:focus-within,
+.field:hover {
+  border: 2px solid #70d1c9;
+}
+
+.submit {
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 22px;
+  background-color: #70d1c9;
+  transition: all 0.4s ease-in-out;
+  color: #ffffff;
+}
+.submit:hover {
+  box-shadow: 0 0 0 6px #ffff, 0 0 0 8px #70d1c9;
+  color: #ebf0f3;
+  background-color: #61b8d0;
+  scale: 0.96;
+}
+.forgot {
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* margin-top: 1rem; */
+  color: #236cab;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+.forgot:hover {
+  color: #161d20;
+}
+.gap{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* border: 1px solid green; */
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+/* ############# media query ################# */
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    width: 60%;
+  }
+  /* .input-field{
+    width: 4rem;
+  } */
+  .field {
+    width: 80%;
+    /* overflow: hidden; */
+  }
+  .input-field{
+    width: 30%;
+  }
+  .fa-eye {
+    margin-left: 0.1rem;
+  }
+  
+  .submit {
+    padding: 0.7rem 1.5rem;
+  }
+  
+  .forgot {
+    font-size: 0.7rem;
+  }
+}
+/* ############# Invalid ################# */
+
+input:valid {
+  border-color: green;
+}
+
+/* Style the input elements with invalid values */
+input:invalid {
+  border-color: red;
+}
+
+/* Style the error messages */
+.error {
+  color: red;
+  font-size: 12px;
+}
+/* #########To stope default behavior of browser############## */
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
